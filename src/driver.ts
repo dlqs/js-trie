@@ -1,3 +1,5 @@
+import { Trie } from './trieMap'
+
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
         main()
@@ -5,31 +7,6 @@ document.onreadystatechange = () => {
 }
 
 const TEXTFILE = 'shakespeare.txt'
-
-const loadContent = () => {
-    return new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest()
-        xhr.open('GET', TEXTFILE, true)
-        xhr.onload = function () {
-            if (this.status === 200) {
-                document.getElementById('content').textContent  = xhr.responseText
-                resolve()
-            } else {
-                reject({
-                    status: this.status,
-                    statusText: xhr.statusText
-                })
-            }
-        }
-        xhr.onerror = function() {
-            reject({
-                status: this.status,
-                statusText: xhr.statusText
-            })
-        }
-        xhr.send(null)
-    })
-}
 
 const main = async () => {
     await loadContent()
@@ -79,4 +56,29 @@ const refreshTimeIndex = (i: number) => {
 
 const refreshTimeSearch = (i: number) =>  {
     document.getElementById('timeSearch').textContent = i.toString()
+}
+
+const loadContent = () => {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', TEXTFILE, true)
+        xhr.onload = function () {
+            if (this.status === 200) {
+                document.getElementById('content').textContent  = xhr.responseText
+                resolve()
+            } else {
+                reject({
+                    status: this.status,
+                    statusText: xhr.statusText
+                })
+            }
+        }
+        xhr.onerror = function() {
+            reject({
+                status: this.status,
+                statusText: xhr.statusText
+            })
+        }
+        xhr.send(null)
+    })
 }

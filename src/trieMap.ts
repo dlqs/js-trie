@@ -17,7 +17,7 @@ class TrieNode {
         return char in this.children
     }
 }
-class Trie {
+export class Trie {
     root: TrieNode
     constructor() {
         this.root = null
@@ -89,13 +89,3 @@ class Trie {
         return this._getSubtrie(prefix, str.slice(1), node.getChildChar(charToCheck), arr)
     }
 }
-
-//const trie = new Trie()
-//trie.insert('bash')
-//trie.insert('babe')
-//trie.insert('baby')
-//trie.insert('baa')
-//trie.insert('bb')
-//
-//console.log(trie.getSubTrie('bab'))
-//console.log(trie.getSubTrie('b'))
