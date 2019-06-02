@@ -1,0 +1,23 @@
+{
+  "name": "trie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlqs/js-trie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlqs/js-trie/issues"
+  },
+  "homepage": "https://github.com/dlqs/js-trie#readme",
+  "dependencies": {
+    "typescript": "^3.5.1"
+  }
+}

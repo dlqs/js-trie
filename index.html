@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Client side search test
+        </title>
+        <script type="text/javascript" src="./bin/trieMap.js"></script>
+        <script type="text/javascript" src="./bin/driver.js"></script>
+    </head>
+
+    <body>
+        <h1>
+            The Entirety of Shakespeare's works
+        </h1>
+        <h2>
+            164,202 lines | 961,055 words | 5,786,591 bytes | 5,750,599 (UTF-8) characters
+        </h2>
+        <input id="searchBox" type="text" />
+        <p>Time to index: <span id="timeIndex"></span>ms</p>
+        <p>Time to search: <span id="timeSearch"></span>ms</p>
+        <h2>Results</h2>
+        <ol id="myList">
+
+        </ol>
+        <hr/>
+        <div id='content'>
+            Loading the entirety of Shakespeare's works...
+        </div> 
+    </body>
+</html>
